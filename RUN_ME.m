@@ -1,11 +1,11 @@
 % Fernando Ponce 73237738
 % Experiment Part 2
 clear all;
-%p = input('Input participant number: ');
-%c = input('Input condition[1/2]: ');
+p = input('Input participant number: ');
+c = input('Input condition[1/2]: ');
 %d = input('Debug?: ');
-p = 2;
-c = 2;
+%p = 2;
+%c = 2;
 d = 0;
 %-------------------------------------
 % Condition 1: Token 1: Positive, Token 2: Negative, Token 3: Independent
@@ -30,7 +30,7 @@ end
 
 % Cogent Settings ---------------------------------
 warning('off','MATLAB:dispatcher:InexactMatch')
-config_display(0, 4,[1 1 1], [0 0 0], 'Arial', 32, 8);
+config_display(1, 4,[1 1 1], [0 0 0], 'Arial', 32, 8);
 config_keyboard(10, 5, 'nonexclusive');
 start_cogent;
 %HideCursor;
@@ -439,7 +439,7 @@ cgflip(1,1,1);
 waitkeydown(inf,[71]);
 
 cgtrncol(1004,'w');
-cgdrawsprite(1003,0,0);
+cgdrawsprite(1004,0,0);
 cgflip(1,1,1);
 waitkeydown(inf,[71]);
 % Set the number of trials wanted for phase 2:
@@ -525,7 +525,7 @@ rt = zeros(num_trials2,1);
 % IV
 counter2 = 1;
 % Type of shape
-type = [100 200 300];
+type = [100 200];
 
 % ----- Instructions Display --------------
 cgsetsprite(0);
@@ -570,7 +570,7 @@ for x=1:num_trials2
     % Object fixation
     cgtrncol((type(answer(x,1)) + 1),'w');
     cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
-    cgtrncol((type(answer(x,1))++ 2),'w');
+    cgtrncol((type(answer(x,1)) + 2),'w');
     cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
 
     cgtrncol(812,'w');
