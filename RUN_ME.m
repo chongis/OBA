@@ -1,7 +1,7 @@
 % Fernando Ponce 73237738
 % Experiment Part 2
 clear all;
-p = input('Input participant number: ');
+par = input('Input participant number: ');
 c = input('Input condition[1/2]: ');
 %d = input('Debug?: ');
 %p = 2;
@@ -405,7 +405,7 @@ end
 accuracy = correct / num_trials;
 blocks_completed = blocks_completed + 1;
 
-if accuracy >= 90
+if accuracy >= .9
     w = w + 1;
 else
     w = 0;
@@ -443,7 +443,7 @@ cgdrawsprite(1004,0,0);
 cgflip(1,1,1);
 waitkeydown(inf,[71]);
 % Set the number of trials wanted for phase 2:
-num_trials2 = 32;
+num_trials2 = 56;
 
 % General Settings ---------------------------------
 filename = 'settings.mat';
@@ -760,5 +760,5 @@ target_location = [target_location];
 t = ran_isi * 100;
 isi_info = [isi_info;t];
 
-save(int2str(p),'c','part_1_shape','part_1_correct','part_1_answer','part_1_activation','part_1_RT','part_1_accuracy','key_pressed','shape_data','rt_data','cue_data','target_data','isi_data','attempt_data','indep','targets_data');
+save(int2str(par),'c','part_1_shape','part_1_correct','part_1_answer','part_1_activation','part_1_RT','part_1_accuracy','key_pressed','shape_data','rt_data','cue_data','target_data','isi_data','attempt_data','indep','targets_data');
 stop_cogent;
