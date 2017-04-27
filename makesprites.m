@@ -33,6 +33,10 @@ cgmakesprite(102,width,height,0,0,0);
 cgsetsprite(102);
 cgloadbmp(102,'Images/first_token_right.bmp');
 
+cgmakesprite(103,width,height,0,0,0);
+cgsetsprite(103);
+cgloadbmp(103,'Images/first_token_both.bmp');
+
 % Second Token rectangle
 cgmakesprite(201,width,height,0,0,0);
 cgsetsprite(201);
@@ -41,6 +45,10 @@ cgloadbmp(201,'Images/second_token_left.bmp');
 cgmakesprite(202,width,height,0,0,0);
 cgsetsprite(202);
 cgloadbmp(202,'Images/second_token_right.bmp');
+
+cgmakesprite(203,width,height,0,0,0);
+cgsetsprite(203);
+cgloadbmp(203,'Images/second_token_both.bmp');
 
 % Third token circle
 cgmakesprite(301,width,height,0,0,0);

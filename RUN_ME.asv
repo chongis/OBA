@@ -6,7 +6,7 @@ c = input('Input condition[1/2]: ');
 %d = input('Debug?: ');
 %p = 2;
 %c = 2;
-d = 0-;
+d = 2;
 %-------------------------------------
 % Condition 1: Token 1: Positive, Token 2: Negative, Token 3: Independent
 % Condition 2: Token 1: Independent, Token 2: Positive, Token 3: Negative
@@ -568,10 +568,13 @@ for x=1:num_trials2
     isi_data(x,block) = 200;
 
     % Object fixation
-    cgtrncol((type(answer(x,1)) + 1),'w');
-    cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
-    cgtrncol((type(answer(x,1)) + 2),'w');
-    cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 1),'w');
+    %cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 2),'w');
+    %cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    
+    cgtrncol((type(answer(x,1)) + 3),'w');
+    cgdrawsprite((type(answer(x,1)) + 3),0,0,scalex,scaley);
 
     cgtrncol(812,'w');
     cgdrawsprite(812,2.5,0,scalebar,800);
@@ -579,10 +582,13 @@ for x=1:num_trials2
     wait(1000);
 
     % Cue activation -----------
-    cgtrncol((type(answer(x,1)) + 1),'w');
-    cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
-    cgtrncol((type(answer(x,1)) + 2),'w');
-    cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 1),'w');
+    %cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 2),'w');
+    %cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    
+    cgtrncol((type(answer(x,1)) + 3),'w');
+    cgdrawsprite((type(answer(x,1)) + 3),0,0,scalex,scaley);
 
     cgtrncol(303,'b');
 
@@ -604,10 +610,13 @@ for x=1:num_trials2
     wait(60);
 
     % ISI -----------------------------
-    cgtrncol((type(answer(x,1)) + 1),'w');
-    cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
-    cgtrncol((type(answer(x,1)) + 2),'w');
-    cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 1),'w');
+    %cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 2),'w');
+    %cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    
+    cgtrncol((type(answer(x,1)) + 3),'w');
+    cgdrawsprite((type(answer(x,1)) + 3),0,0,scalex,scaley);
 
     cgtrncol(812,'w');
     cgdrawsprite(812,2.5,0,scalebar,800);

@@ -115,10 +115,14 @@ for x=1:num_trials
     disp(x);
     shape_(x,1) = token(x);
     if token(x) == 103 || token(x) == 203 || token(x) == 303
-       cgtrncol((token(x) - 2),'w');
-       cgdrawsprite((token(x) - 2),spacing1,0,scalex,scaley);
-       cgtrncol((token(x) - 1),'w');
-       cgdrawsprite((token(x) - 1),spacing2,0,scalex,scaley);
+       %cgtrncol((token(x) - 2),'w');
+       %cgdrawsprite((token(x) - 2),spacing1,0,scalex,scaley);
+       %cgtrncol((token(x) - 1),'w');
+       %cgdrawsprite((token(x) - 1),spacing2,0,scalex,scaley);
+       
+       cgtrncol((token(x)),'w');
+       cgdrawsprite((token(x)),0,0,scalex,scaley);
+       
        cgtrncol((token(x) + 1),'w');
        cgdrawsprite((token(x) + 1),0,-220,200,220); % Sign
        if token(x) == 103
@@ -180,10 +184,14 @@ for x=1:num_trials
 
     % ----------- Prenting the participant's answer
     if token(x) == 103 || token(x) == 203 || token(x) == 303
-       cgtrncol((token(x) - 2),'w');
-       cgdrawsprite((token(x) - 2),spacing1,0,scalex,scaley);
-       cgtrncol((token(x) - 1),'w');
-       cgdrawsprite((token(x) - 1),spacing2,0,scalex,scaley);
+       %cgtrncol((token(x) - 2),'w');
+       %cgdrawsprite((token(x) - 2),spacing1,0,scalex,scaley);
+       %cgtrncol((token(x) - 1),'w');
+       %cgdrawsprite((token(x) - 1),spacing2,0,scalex,scaley);
+       
+       cgtrncol((token(x)),'w');
+       cgdrawsprite((token(x)),0,0,scalex,scaley);
+       
        cgtrncol((token(x) + 1),'w');
        cgdrawsprite((token(x) + 1),0,-220,200,220); % Sign
        if token(x) == 103
@@ -238,10 +246,16 @@ for x=1:num_trials
     % --------- Present Only Shape and Enzyme ----------------
 
     if token(x) == 103 || token(x) == 203 || token(x) == 303
-       cgtrncol((token(x) - 2),'w');
-       cgdrawsprite((token(x) - 2),spacing1,0,scalex,scaley);
-       cgtrncol((token(x) - 1),'w');
-       cgdrawsprite((token(x) - 1),spacing2,0,scalex,scaley);
+        
+        
+       %cgtrncol((token(x) - 2),'w');
+       %cgdrawsprite((token(x) - 2),spacing1,0,scalex,scaley);
+       %cgtrncol((token(x) - 1),'w');
+       %cgdrawsprite((token(x) - 1),spacing2,0,scalex,scaley);
+       
+       cgtrncol((token(x)),'w');
+       cgdrawsprite((token(x)),0,0,scalex,scaley);
+       
        cgtrncol((token(x) + 1),'w');
        cgdrawsprite((token(x) + 1),0,-220,200,220); % Sign
        if token(x) == 103
@@ -311,10 +325,10 @@ for x=1:num_trials
 
     if answer == 1
         if token(x) == 103 || token(x) == 203 || token(x) == 303
-           cgtrncol((token(x) - 2),'w');
-           cgdrawsprite((token(x) - 2),spacing1,0,scalex,scaley);
-           cgtrncol((token(x) - 1),'w');
-           cgdrawsprite((token(x) - 1),spacing2,0,scalex,scaley);
+           cgtrncol((token(x)),'w');
+           cgdrawsprite((token(x)),0,0,scalex,scaley);
+           %cgtrncol((token(x) - 1),'w');
+           %cgdrawsprite((token(x) - 1),spacing2,0,scalex,scaley);
            if act == 1; %Activation
                %cgtrncol(777,'w');
                %cgdrawsprite(777,0,-220,200,220)
@@ -568,10 +582,13 @@ for x=1:num_trials2
     isi_data(x,block) = 200;
 
     % Object fixation
-    cgtrncol((type(answer(x,1)) + 1),'w');
-    cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
-    cgtrncol((type(answer(x,1)) + 2),'w');
-    cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 1),'w');
+    %cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 2),'w');
+    %cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    
+    cgtrncol((type(answer(x,1)) + 3),'w');
+    cgdrawsprite((type(answer(x,1)) + 3),0,0,scalex,scaley);
 
     cgtrncol(812,'w');
     cgdrawsprite(812,2.5,0,scalebar,800);
@@ -579,10 +596,13 @@ for x=1:num_trials2
     wait(1000);
 
     % Cue activation -----------
-    cgtrncol((type(answer(x,1)) + 1),'w');
-    cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
-    cgtrncol((type(answer(x,1)) + 2),'w');
-    cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 1),'w');
+    %cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 2),'w');
+    %cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    
+    cgtrncol((type(answer(x,1)) + 3),'w');
+    cgdrawsprite((type(answer(x,1)) + 3),0,0,scalex,scaley);
 
     cgtrncol(303,'b');
 
@@ -604,10 +624,13 @@ for x=1:num_trials2
     wait(60);
 
     % ISI -----------------------------
-    cgtrncol((type(answer(x,1)) + 1),'w');
-    cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
-    cgtrncol((type(answer(x,1)) + 2),'w');
-    cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 1),'w');
+    %cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 2),'w');
+    %cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    
+    cgtrncol((type(answer(x,1)) + 3),'w');
+    cgdrawsprite((type(answer(x,1)) + 3),0,0,scalex,scaley);
 
     cgtrncol(812,'w');
     cgdrawsprite(812,2.5,0,scalebar,800);
@@ -617,10 +640,14 @@ for x=1:num_trials2
     % -------------------------------
 
     % Target Presentation -----------
-    cgtrncol((type(answer(x,1)) + 1),'w');
-    cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
-    cgtrncol((type(answer(x,1)) + 2),'w');
-    cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 1),'w');
+    %cgdrawsprite((type(answer(x,1)) + 1),spacing1,0,scalex,scaley);
+    %cgtrncol((type(answer(x,1)) + 2),'w');
+    %cgdrawsprite((type(answer(x,1)) + 2),spacing2,0,scalex,scaley);
+    
+    cgtrncol((type(answer(x,1)) + 3),'w');
+    cgdrawsprite((type(answer(x,1)) + 3),0,0,scalex,scaley);
+    
     if answer(x,5) == 1 % Same side as target
         if answer(x,4) == 1 %|| answer(x,4) == 3
             tar = [3]; % Used to be tar = [1 3];
